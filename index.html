@@ -8,34 +8,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px; /* ✅ fixes navbar overlap */
-    }
-
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #000;
       color: #d1d1d1;
     }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* prevent navbar overlap */
+    }
+
+    /* Section background fade */
     section {
       background: linear-gradient(to bottom, #000, #1a1a1a);
       padding: 4rem 0;
-      border-radius: 0 0 1rem 1rem;
+      border-radius: 0 0 1rem 1rem; /* rounded bottom */
     }
 
+    /* Headings (capitalized text) */
     h1, h2, h3, h4 {
       color: #ffffff;
       font-weight: 300;
       letter-spacing: 1px;
     }
 
+    /* Paragraph text (smaller + lighter) */
     p {
       color: #e6e6e6;
       font-size: 0.9rem;
     }
 
+    /* Portfolio images/videos same size */
     .portfolio-item img,
     .portfolio-item video {
       width: 100%;
@@ -45,14 +49,16 @@
       cursor: pointer;
     }
 
+    /* Hover glow */
     .hover-glow {
       transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
     .hover-glow:hover {
       transform: scale(1.02);
-      box-shadow: 0 0 12px 2px rgba(150,150,150,0.3);
+      box-shadow: 0 0 10px 2px rgba(150,150,150,0.3);
     }
 
+    /* Lightbox */
     #lightbox {
       display: none;
       position: fixed;
@@ -80,6 +86,7 @@
       transform: scale(1);
     }
 
+    /* Sticky navbar */
     nav {
       position: sticky;
       top: 0;
@@ -95,13 +102,7 @@
       color: #ffffff;
     }
 
-    nav a.active {
-      color: #ffffff;
-      font-weight: 400;
-      border-bottom: 2px solid #ffffff;
-      padding-bottom: 2px;
-    }
-
+    /* Mohell brand font */
     .brand {
       font-family: 'Dancing Script', cursive;
       font-size: 1.5rem;
@@ -122,10 +123,10 @@
   <nav class="flex justify-between items-center px-8 py-4">
     <div class="brand">Mohell</div>
     <div class="flex space-x-8 text-sm uppercase tracking-widest text-gray-300">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#portfolio" class="nav-link">Portfolio</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
@@ -146,47 +147,98 @@
   <section id="portfolio" class="px-6">
     <h2 class="text-3xl text-center mb-8">PORTFOLIO</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Project 1 -->
       <div class="portfolio-item hover-glow">
         <img src="Smokin.jpg" alt="Project 1">
-        <div class="p-4"><h4>ILLUSTRATION</h4><p>Portrait</p></div>
+        <div class="p-4">
+          <h4>ILLUSTRATION</h4>
+          <p>Portrait</p>
+        </div>
       </div>
+
+      <!-- Project 2 -->
       <div class="portfolio-item hover-glow">
         <img src="mononoke.png" alt="Project 2">
-        <div class="p-4"><h4>ILLUSTRATION</h4><p>Mononoke</p></div>
+        <div class="p-4">
+          <h4>ILLUSTRATION</h4>
+          <p>Mononoke</p>
+        </div>
       </div>
+
+      <!-- Project 3 -->
       <div class="portfolio-item hover-glow">
         <img src="för tung.jpg" alt="Project 3">
-        <div class="p-4"><h4>ILLUSTRATION</h4><p>Expression</p></div>
+        <div class="p-4">
+          <h4>ILLUSTRATION</h4>
+          <p>Expression</p>
+        </div>
       </div>
+
+      <!-- Project 4 -->
       <div class="portfolio-item hover-glow">
         <img src="rbanks.jpg" alt="Project 5">
-        <div class="p-4"><h4>ILLUSTRATION</h4><p>Rapper Portrait</p></div>
+        <div class="p-4">
+          <h4>ILLUSTRATION</h4>
+          <p>Rapper Portrait</p>
+        </div>
       </div>
+
+      <!-- Project 5 -->
       <div class="portfolio-item hover-glow">
         <img src="FRIDAY illustration.png" alt="Project 6">
-        <div class="p-4"><h4>ILLUSTRATION</h4><p>Friday Movie</p></div>
+        <div class="p-4">
+          <h4>ILLUSTRATION</h4>
+          <p>Friday Movie</p>
+        </div>
       </div>
+
+      <!-- Project 6 -->
       <div class="portfolio-item hover-glow">
         <img src="Uggla 2.jpg" alt="Project 4">
-        <div class="p-4"><h4>DESIGN</h4><p>Canvas illustration</p></div>
+        <div class="p-4">
+          <h4>DESIGN</h4>
+          <p>Canvas illustration</p>
+        </div>
       </div>
+
+      <!-- Project 7 -->
       <div class="portfolio-item hover-glow">
         <img src="lion.png" alt="Project 7">
-        <div class="p-4"><h4>DESIGN</h4><p>Art business logo (Visionary Lioness)</p></div>
+        <div class="p-4">
+          <h4>DESIGN</h4>
+          <p>Art business logo (Visionary Lioness)</p>
+        </div>
       </div>
+
+      <!-- Project 8 -->
       <div class="portfolio-item hover-glow">
         <img src="Logga F 1.png" alt="Project 8">
-        <div class="p-4"><h4>DESIGN</h4><p>Football Club Logo (Allstars FC)</p></div>
+        <div class="p-4">
+          <h4>DESIGN</h4>
+          <p>Football Club Logo (Allstars FC)</p>
+        </div>
       </div>
+
+      <!-- Project 9 -->
       <div class="portfolio-item hover-glow">
-        <img src="GF600 No font.jpg" alt="Project 9">
-        <div class="p-4"><h4>ALBUM COVER</h4><p>Cover for Ghostface600's album (tugg melodies ape colours)</p></div>
+        <img src="GF600 No font.jpg" alt="Project 8">
+        <div class="p-4">
+          <h4>ALBUM COVER</h4>
+          <p>Cover for Ghostface600's album (tugg melodies ape colours)</p>
+        </div>
       </div>
+
+      <!-- Project 10 (Video) -->
       <div class="portfolio-item hover-glow">
         <video autoplay loop muted playsinline class="cursor-pointer">
           <source src="danil.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
-        <div class="p-4"><h4>ALBUM COVER</h4><p>Cover for DanièL Lyssna's EP (för långt bort)</p></div>
+        <div class="p-4">
+          <h4>ALBUM COVER</h4>
+          <p>Cover for DanièL Lyssna's EP (för långt bort)</p>
+        </div>
       </div>
     </div>
   </section>
@@ -195,7 +247,8 @@
   <section id="about" class="px-6 text-center">
     <h2 class="text-3xl mb-6">ABOUT</h2>
     <p class="max-w-2xl mx-auto mb-6 text-sm">
-      My name is <span class="font-semibold">Adam Auvinen</span>, better known as <span style="font-family: 'Dancing Script', cursive;">Mohell</span>. 
+      My name is <span class="font-semibold">Adam Auvinen</span>, better known as 
+      <span style="font-family: 'Dancing Script', cursive;">Mohell</span>. 
       I am based in Stockholm, Sweden, and I freelance as a graphic illustrator and designer with years of experience in Photoshop. 
       Over the years I’ve created illustrations, brand designs, and unique artwork for a wide range of projects.
     </p>
@@ -219,28 +272,6 @@
     <p>© 2025 My Portfolio. All rights reserved.</p>
   </footer>
 
-  <!-- Script -->
-  <script>
-    // Scroll spy for navbar highlighting
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          current = section.getAttribute("id");
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
